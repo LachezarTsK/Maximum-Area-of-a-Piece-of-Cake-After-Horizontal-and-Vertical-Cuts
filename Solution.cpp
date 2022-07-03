@@ -15,7 +15,7 @@ public:
             maxSliceHorizontal = max(maxSliceHorizontal, (horizontalCuts[i] - horizontalCuts[i - 1]));
         }
 
-        sort(verticalCuts.begin(), verticalCuts.end(), comparatorSmallerNumbersFirst);
+        sort(verticalCuts.begin(), verticalCuts.end());
         int maxSliceVertical = max(verticalCuts[0], (width - verticalCuts[verticalCuts.size() - 1]));
         for (int i = 1; i < verticalCuts.size(); ++i) {
             maxSliceVertical = max(maxSliceVertical, (verticalCuts[i] - verticalCuts[i - 1]));
